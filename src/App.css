@@ -83,3 +83,29 @@ body {
 .px-4 { padding-left: 1.5rem; padding-right: 1.5rem; }
 .px-5 { padding-left: 2rem; padding-right: 2rem; }
 .px-6 { padding-left: 3rem; padding-right: 3rem; } 
+
+.btn-lang-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.language-select {
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  background-color: white;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .btn-lang-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .language-select {
+    margin-top: 8px;
+  }
+}

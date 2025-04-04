@@ -1,37 +1,38 @@
 import React from 'react';
 import '../styles/Footer.css';
-
+import { useTranslation } from 'react-i18next';
 const Footer = () => {
+  const { t } = useTranslation();
   return (
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-grid">
           {/* Quick Links */}
           <div className="footer-column">
-            <h3>Quick Links</h3>
+            <h3>{t("ql")}</h3>
             <ul className="footer-links">
-              <li><a href="#home" className="footer-link">Home</a></li>
-              <li><a href="#about" className="footer-link">About</a></li>
-              <li><a href="#services" className="footer-link">Services</a></li>
-              <li><a href="#contact" className="footer-link">Contact</a></li>
-              <li><a href="#privacy" className="footer-link">Privacy Policy</a></li>
+              <li><a href="#home" className="footer-link">{t("h")}</a></li>
+              <li><a href="#about" className="footer-link">{t("a")}</a></li>
+              <li><a href="#services" className="footer-link">{t("s")}</a></li>
+              <li><a href="#contact" className="footer-link">{t("c")}</a></li>
+              <li><a href="#privacy" className="footer-link">{t("pp")}</a></li>
             </ul>
           </div>
 
           {/* Services */}
           <div className="footer-column">
-            <h3>Our Services</h3>
+            <h3>{t("os")}</h3>
             <ul className="footer-links">
-              <li><a href="#telemedicine" className="footer-link">Telemedicine</a></li>
-              <li><a href="#resources" className="footer-link">Health Resources</a></li>
-              <li><a href="#support" className="footer-link">Community Support</a></li>
-              <li><a href="#clinics" className="footer-link">Find a Clinic</a></li>
+              <li><a href="#telemedicine" className="footer-link">{t("tele")}</a></li>
+              <li><a href="#resources" className="footer-link">{t("res")}</a></li>
+              <li><a href="#support" className="footer-link">{t("cs")}</a></li>
+              <li><a href="#clinics" className="footer-link">{t("fc")}</a></li>
             </ul>
           </div>
 
           {/* Contact Info */}
           <div className="footer-column">
-            <h3>Contact Us</h3>
+            <h3>{t("c")}</h3>
             <ul className="footer-links">
               <li className="footer-contact-item">
                 <svg className="footer-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -57,7 +58,7 @@ const Footer = () => {
 
           {/* Newsletter */}
           <div className="footer-column">
-            <h3>Stay Connected</h3>
+            <h3>{t("c")}</h3>
             <p className="footer-newsletter">Subscribe to our newsletter for updates</p>
             <div className="newsletter-form">
               <input 

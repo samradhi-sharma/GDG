@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { use } from 'react';
 import './App.css';
 import Header from './components/Header';
 import HeroSection from './components/HeroSection';

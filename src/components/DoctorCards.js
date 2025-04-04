@@ -1,52 +1,53 @@
 import React from 'react';
 import '../styles/DoctorCards.css';
-
+import { useTranslation } from 'react-i18next';
 const DoctorCards = ({ isVisible, onClose }) => {
+  const { t } = useTranslation();
   const doctors = [
     {
       id: 1,
-      name: 'Dr. Sarah Johnson',
-      specialization: 'Cardiologist',
+      name: t('sj'),
+      specialization: t('cardio'),
       rating: 4.8,
       price: '$150',
       image: 'https://randomuser.me/api/portraits/women/45.jpg'
     },
     {
       id: 2,
-      name: 'Dr. Michael Chen',
-      specialization: 'Neurologist',
+      name: t('mc'),
+      specialization: t('neuro'),
       rating: 4.9,
       price: '$180',
       image: 'https://randomuser.me/api/portraits/men/32.jpg'
     },
     {
       id: 3,
-      name: 'Dr. Amelia Patel',
-      specialization: 'Pediatrician',
+      name: t('ap'),
+      specialization: t('ped'),
       rating: 4.7,
       price: '$120',
       image: 'https://randomuser.me/api/portraits/women/67.jpg'
     },
     {
       id: 4,
-      name: 'Dr. Robert Williams',
-      specialization: 'Orthopedic Surgeon',
+      name: t('rw'),
+      specialization: t('or'),
       rating: 4.6,
       price: '$220',
       image: 'https://randomuser.me/api/portraits/men/52.jpg'
     },
     {
       id: 5,
-      name: 'Dr. Emily Rodriguez',
-      specialization: 'Dermatologist',
+      name: t('er'),
+      specialization: t('dr'),
       rating: 4.9,
       price: '$160',
       image: 'https://randomuser.me/api/portraits/women/23.jpg'
     },
     {
       id: 6,
-      name: 'Dr. David Kim',
-      specialization: 'Psychiatrist',
+      name: t('dw'),
+      specialization: t('ps'),
       rating: 4.7,
       price: '$190',
       image: 'https://randomuser.me/api/portraits/men/78.jpg'

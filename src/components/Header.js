@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
 import '../styles/Header.css';
+import { useTranslation } from 'react-i18next';
+import LanguageSelector from './language-selector';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+  const { t } = useTranslation();
   return (
+
     <header className="header">
       <div className="container header-container">
         {/* Logo */}
@@ -16,7 +19,7 @@ const Header = () => {
         </div>
 
         {/* Mobile menu button */}
-        <button 
+        <button
           className="mobile-menu-btn"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
@@ -31,25 +34,33 @@ const Header = () => {
 
         {/* Desktop Navigation */}
         <nav className="nav-desktop">
-          <a href="#home" className="nav-link">Home</a>
-          <a href="#about" className="nav-link">About</a>
-          <a href="#services" className="nav-link">Services</a>
-          <a href="#contact" className="nav-link">Contact</a>
-          <a href="#donate" className="nav-link">Donate</a>
-          <button className="btn btn-help">Get Help Now</button>
-        </nav>
+  <a href="#home" className="nav-link">{t("h")}</a>
+  <a href="#about" className="nav-link">{t("a")}</a>
+  <a href="#services" className="nav-link">{t("s")}</a>
+  <a href="#contact" className="nav-link">{t("c")}</a>
+  <a href="#donate" className="nav-link">{t("d")}</a>
+  <div className="btn-lang-wrapper">
+    <button className="btn btn-help">{t("gh")}</button>
+    <LanguageSelector />
+  </div>
+</nav>
+
       </div>
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
         <div className="mobile-menu">
           <div className="mobile-menu-links">
-            <a href="#home" className="mobile-nav-link">Home</a>
-            <a href="#about" className="mobile-nav-link">About</a>
-            <a href="#services" className="mobile-nav-link">Services</a>
-            <a href="#contact" className="mobile-nav-link">Contact</a>
-            <a href="#donate" className="mobile-nav-link">Donate</a>
-            <button className="btn mobile-btn-help">Get Help Now</button>
+            <a href="#home" className="mobile-nav-link">{t("h")}</a>
+            <a href="#about" className="mobile-nav-link">{t("a")}</a>
+            <a href="#services" className="mobile-nav-link">{t("s")}</a>
+            <a href="#contact" className="mobile-nav-link">{t("c")}</a>
+            <a href="#donate" className="mobile-nav-link">{t("d")}</a>
+            <div className="btn-lang-wrapper">
+              <button className="btn btn-help">{t("gh")}</button>
+              <LanguageSelector />
+            </div>
+
           </div>
         </div>
       )}

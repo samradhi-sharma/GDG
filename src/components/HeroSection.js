@@ -1,18 +1,19 @@
 import React from 'react';
 import '../styles/HeroSection.css';
-
+import { useTranslation } from 'react-i18next';
 const HeroSection = () => {
+  const { t } = useTranslation();
   return (
     <section className="hero">
       <div className="hero-content">
         <h1 className="hero-title">
-          Bringing Healthcare Closer to Underserved Communities
+          {t('hero')}
         </h1>
         <p className="hero-subtitle">
-          Innovative, scalable, and sustainable solutions to improve access to healthcare.
+          {t('hero2')}
         </p>
         <button className="btn btn-lg">
-          Explore Solutions
+          {t('hero3')}
         </button>
       </div>
     </section>
